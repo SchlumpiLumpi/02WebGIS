@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Tom Suchantke">
+    <title>Website exercise 2</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script defer src="js_functions.js"></script> 
+    <style>
+        table, th, td {
+          border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<div id="inputs">
+<!-- Inputfelder -->
+<!-- .geojson upload-->
+<p>Upload your geojson-data</p>
+<input type ="file" onchange = "file_upload(this)"><br><br>
+<!--Input new Point-->
+<p>Input your point</p>
+<p>longitude:<input id="new_Point_lon" type="number" step="any"></p>
+<p>latitude:<input id="new_Point_lat" type="number" step="any"></p>
+<p>name:<input id="new_Point_name" type="text"><br>
+<button id="button_new_Point">Submit</button><br><br>
+<!--compute nearest cities-->
+<button id="button_nearest_cities">calculate nearest cities</button><br><br>
+</div>
+
+<div id="outputs">
+
+    <!--displaying outputs in a table-->
+    <div>
+    <table id="table1">
+    </table> 
+    </div>
+    <div>
+    <button id="displayChart">Display Chart?</button>
+    <!--chart.js -charts-->
+    <canvas id="chart1"></canvas>
+    </div>
+</div>  
+
+    
+</body>
+</html>
